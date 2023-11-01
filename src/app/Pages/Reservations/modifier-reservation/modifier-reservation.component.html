@@ -1,0 +1,75 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Modifier une réservation</h4>
+                        <p class="card-category">Modifier les informations de réservation</p>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="updateReservation()">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <mat-label>Référence</mat-label>
+                                  <input matInput placeholder="Référence" name="ref"type="text" [(ngModel)]="newReservation.ref">
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <mat-label>Statut</mat-label>
+                                  <mat-select [(ngModel)]="newReservation.statut">
+                                    <mat-option value="CONFIRMEE">CONFIRMEE</mat-option>
+                                    <mat-option value="ANNULEE">ANNULEE</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <mat-label>Type</mat-label>
+                                  <mat-select  name="type" [(ngModel)]="newReservation.type">
+                                    <mat-option value="ENTRAINMENT">ENTRAINMENT</mat-option>
+                                    <mat-option value="COURS">COURS</mat-option>
+                                    <mat-option value="CARDIO">CARDIO</mat-option>
+                                    <mat-option value="MUSCULATION">MUSCULATION</mat-option>
+                                    <mat-option value="FITNESS">FITNESS</mat-option>
+                                    <mat-option value="PISCINE">PISCINE</mat-option>
+                                    <mat-option value="AEROBIC">AEROBIC</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <mat-label>Date de début</mat-label>
+                                  <input matInput placeholder="Date de début" type="date" name="DateDebutReser" [(ngModel)]="newReservation.DateDebutReser">
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <mat-label>Date de fin</mat-label>
+                                  <input matInput placeholder="Date de fin" type="date" name="DateFinReser" [(ngModel)]="newReservation.DateFinReser">
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <button mat-raised-button type="submit" class="btn btn-danger pull-right">Modifier la réservation</button>
+                              </div>
+                            </div>
+                          </form>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

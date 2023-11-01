@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de connexion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Ajoutez vos styles ici */
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .card {
+            margin-top: 100px;
+        }
+
+        .card-header {
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-title {
+            margin-bottom: 0;
+            color: white;
+        }
+
+        .form-control:focus {
+            border-color: #f44336;
+            box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25);
+        }
+
+        .btn-login {
+            background-color: #f44336;
+            border-color: #f44336;
+            color: white;
+            width: 100%;
+        }
+
+        .btn-login:hover {
+            background-color: #f44336;
+            border-color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Connexion</h4>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="logIn()">
+                            <div class="form-group">
+                                <label for="username">Nom d'utilisateur</label>
+                                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" placeholder="Entrez votre nom d'utilisateur">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" placeholder="Entrez votre mot de passe">
+                            </div>
+                            <div>
+                                <p style="color: red;">{{this.errorAuth}}</p>
+                            </div>
+                            <button type="submit" class="btn btn-login">Se connecter</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

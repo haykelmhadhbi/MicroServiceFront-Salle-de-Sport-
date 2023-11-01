@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Modifier un Evenement</h4>
+                        <p class="card-category">Modifier les informations de l'evenement</p>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="updateEvenements()">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <mat-label>Title</mat-label>
+                                  <input matInput placeholder="title" name="title"type="text" [(ngModel)]="newEvenement.title">
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <mat-form-field class="example-full-width">
+                                    <mat-label>Description</mat-label>
+                                    <input matInput placeholder="description" name="description"type="text" [(ngModel)]="newEvenement.description">
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <mat-form-field class="example-full-width">
+                                    <mat-label>Event Date</mat-label>
+                                    <input matInput placeholder="eventDate" name="eventDate" type="date" [(ngModel)]="newEvenement.eventDate">
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <button mat-raised-button type="submit" class="btn btn-danger pull-right">Modifier Evenement</button>
+                              </div>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
